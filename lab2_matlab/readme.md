@@ -65,15 +65,15 @@ The following commands can be used for displaying images
  [imwrite]
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
-        ```matlab
+```matlab
          A = imread('5.1.12.tiff');
          imwrite(A,'5.1.12.png')
          imwrite(A,'5.1.12.jpg')
-        ```
+```
 
 3.  Write a matlab function that takes the path of an image and converts it to jpg
         
-        ```matlab
+```matlab
         function im_2_jpg (image)
             %Funcion para convertir el formato de una imagen en cualquier formato
             %  a un formato jpg, se utiliza como parametro el nombre del archivo que
@@ -98,7 +98,7 @@ The following commands can be used for displaying images
                 imwrite(A,[name,'.jpg'])
             end    
         end
-        ```
+```
 
 =======
 
@@ -143,33 +143,41 @@ If the command or script doesn't end in ``exit`` the matlab shell will stay open
 
 1.  Read the manual page
 2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
-
+```matlab
 >> files= dir('*.tiff');
 >> Noise1=imread(files(1).name);
 >> Noise2=imread(files(2).name);
 >> Noise3=imread(files(3).name);
 >> Noise4=imread(files(4).name);
 >> Noise5=imread(files(5).name);
+```
 Imagen 1
+```matlab
 >> Noise_gaussian=imnoise(Noise1,'gaussian');
 >> imwrite(Noise_gaussian,'Noise_gaussian.jpg')
+```
 
 Imagen 2
+```matlab
 >> Noise_poisson=imnoise(Noise2,'poisson');
 >> imwrite(Noise_poisson,'Noise_poisson.jpg')
-
+```
 Imagen 3
+```matlab
 >> Noise_saltNpepper=imnoise(Noise3,'salt & pepper');
 >> imwrite(Noise_saltNpepper,'Noise_saltNpepper.jpg')
-
+```
 Imagen 4
+```matlab
 >> Noise_speckle=imnoise(Noise4,'speckle');
 >> imwrite(Noise_speckle,'Noise_speckle.jpg')
+```
 
 Imagen 5
+```matlab
 >> Noise_localvar=imnoise(Noise5,'localvar',0.05*rand(size(Noise5)));
 >> imwrite(Noise_localvar,'Noise_localvar.jpg')
-
+```
 
 3.  Try saving noisy images as jpg, what happens?
 
