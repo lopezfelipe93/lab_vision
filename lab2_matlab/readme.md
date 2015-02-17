@@ -72,31 +72,30 @@ The following commands can be used for displaying images
 
 3.  Write a matlab function that takes the path of an image and converts it to jpg
 
-    function im_2_jpg (image)
-        %Funcion para convertir el formato de una imagen en cualquier formato
-        %  a un formato jpg, se utiliza como parametro el nombre del archivo que
-         % se quiere convertir
+        >>function im_2_jpg (image)
+            %Funcion para convertir el formato de una imagen en cualquier formato
+            %  a un formato jpg, se utiliza como parametro el nombre del archivo que
+            % se quiere convertir
             A = imread(image);
             [pathstr,name,ext] = fileparts(image);
             imwrite(A,[name,'.jpg'])
-    end
+        >>end
 
-    function all_2_jpg
-        %Funcion que busca todas las imagenes .tiff del directorio en el que 
-        % se encuentra y las convierte a formato jpg
-        %Busca las imagenes en formato '.tiff'
-        files= dir('*.tiff');
-        
-        numel=length(files);
-        
-        for i= 1:numel
-        %Busca los nombres de cada archivo en la estructura de datos
-         fileName=files(i).name;
-        %Lee la imagen, y la convierte a jpg
-        A= imread(fileName);
-        [pathstr,name,ext] = fileparts(fileName);
-        imwrite(A,[name,'.jpg'])
-    end
+        function all_2_jpg
+            %Funcion que busca todas las imagenes .tiff del directorio en el que 
+            % se encuentra y las convierte a formato jpg
+            %Busca las imagenes en formato '.tiff'
+            files= dir('*.tiff');
+            numel=length(files);
+            for i= 1:numel
+             %Busca los nombres de cada archivo en la estructura de datos
+                fileName=files(i).name;
+                %Lee la imagen, y la convierte a jpg
+                A= imread(fileName);
+                [pathstr,name,ext] = fileparts(fileName);
+                imwrite(A,[name,'.jpg'])
+            end    
+        end
 
 =======
 
