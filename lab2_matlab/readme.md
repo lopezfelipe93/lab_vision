@@ -18,12 +18,12 @@ Note the current directory is also shown at the top of the graphical interface
 2.  List the contents of the directory
    
 >> ls
-4.1.01.tiff  4.1.06.tiff  4.2.03.tiff  5.1.09.tiff  5.1.14.tiff  5.3.02.tiff  7.1.05.tiff  7.1.10.tiff	  
-house.tiff   4.1.02.tiff  4.1.07.tiff  4.2.04.tiff  5.1.10.tiff  5.2.08.tiff  7.1.01.tiff  7.1.06.tiff  
-7.2.01.tiff	    numbers.512.tiff       4.1.03.tiff  4.1.08.tiff  4.2.05.tiff  5.1.11.tiff  5.2.09.tiff  
-7.1.02.tiff  7.1.07.tiff  boat.512.tiff    ruler.512.tiff
-4.1.04.tiff  4.2.01.tiff  4.2.06.tiff  5.1.12.tiff  5.2.10.tiff  7.1.03.tiff  7.1.08.tiff  elaine.512.tiff  testpat.1k.tiff
-4.1.05.tiff  4.2.02.tiff  4.2.07.tiff  5.1.13.tiff  5.3.01.tiff  7.1.04.tiff  7.1.09.tiff  gray21.512.tiff
+>>4.1.01.tiff  4.1.06.tiff  4.2.03.tiff  5.1.09.tiff  5.1.14.tiff  5.3.02.tiff  7.1.05.tiff  7.1.10.tiff	  
+>>house.tiff   4.1.02.tiff  4.1.07.tiff  4.2.04.tiff  5.1.10.tiff  5.2.08.tiff  7.1.01.tiff  7.1.06.tiff  
+>>7.2.01.tiff	    numbers.512.tiff       4.1.03.tiff  4.1.08.tiff  4.2.05.tiff  5.1.11.tiff  5.2.09.tiff  
+>>7.1.02.tiff  7.1.07.tiff  boat.512.tiff    ruler.512.tiff
+>>4.1.04.tiff  4.2.01.tiff  4.2.06.tiff  5.1.12.tiff  5.2.10.tiff  7.1.03.tiff  7.1.08.tiff  elaine.512.tiff  testpat.1k.tiff
+>>4.1.05.tiff  4.2.02.tiff  4.2.07.tiff  5.1.13.tiff  5.3.01.tiff  7.1.04.tiff  7.1.09.tiff  gray21.512.tiff
 
 ## Reading Images
 
