@@ -17,13 +17,13 @@ Note the current directory is also shown at the top of the graphical interface
 1.  Change to the *misc* directory, which contains the uncompressed sipi_images
 2.  List the contents of the directory
    
->> ls
->>4.1.01.tiff  4.1.06.tiff  4.2.03.tiff  5.1.09.tiff  5.1.14.tiff  5.3.02.tiff  7.1.05.tiff  7.1.10.tiff	  
->>house.tiff   4.1.02.tiff  4.1.07.tiff  4.2.04.tiff  5.1.10.tiff  5.2.08.tiff  7.1.01.tiff  7.1.06.tiff  
->>7.2.01.tiff	    numbers.512.tiff       4.1.03.tiff  4.1.08.tiff  4.2.05.tiff  5.1.11.tiff  5.2.09.tiff  
->>7.1.02.tiff  7.1.07.tiff  boat.512.tiff    ruler.512.tiff
->>4.1.04.tiff  4.2.01.tiff  4.2.06.tiff  5.1.12.tiff  5.2.10.tiff  7.1.03.tiff  7.1.08.tiff  elaine.512.tiff  testpat.1k.tiff
->>4.1.05.tiff  4.2.02.tiff  4.2.07.tiff  5.1.13.tiff  5.3.01.tiff  7.1.04.tiff  7.1.09.tiff  gray21.512.tiff
+                >ls
+>4.1.01.tiff  4.1.06.tiff  4.2.03.tiff  5.1.09.tiff  5.1.14.tiff  5.3.02.tiff  7.1.05.tiff  7.1.10.tiff	  
+>house.tiff   4.1.02.tiff  4.1.07.tiff  4.2.04.tiff  5.1.10.tiff  5.2.08.tiff  7.1.01.tiff  7.1.06.tiff  
+>7.2.01.tiff	    numbers.512.tiff       4.1.03.tiff  4.1.08.tiff  4.2.05.tiff  5.1.11.tiff  5.2.09.tiff  
+>7.1.02.tiff  7.1.07.tiff  boat.512.tiff    ruler.512.tiff
+>4.1.04.tiff  4.2.01.tiff  4.2.06.tiff  5.1.12.tiff  5.2.10.tiff  7.1.03.tiff  7.1.08.tiff  elaine.512.tiff  testpat.1k.tiff
+>4.1.05.tiff  4.2.02.tiff  4.2.07.tiff  5.1.13.tiff  5.3.01.tiff  7.1.04.tiff  7.1.09.tiff  gray21.512.tiff
 
 ## Reading Images
 
@@ -51,11 +51,11 @@ The following commands can be used for displaying images
 1.  Look at their manual pages
 2.  Try displaying the images read in the previous point using both commands
 -   [image]
--   a=imread('5.1.12.tiff')
--   image(a)
+-   > a=imread('5.1.12.tiff')
+-   > image(a)
 -   [imshow]
--   a=imread('5.1.12.tiff')
--   imshow(a)
+-   > a=imread('5.1.12.tiff')
+-   > imshow(a)
 3.  What are the differences?
 
     >  The 'image' function displays the image with random colors, while the 'imshow' shows the image with the real      colors of the image. This is because the colors that 'image' uses to represent each value are meaningless in          representing the matrix as an image, it just displays it as a matrix of numbers. While 'imshow' works with the        matrix as an image and displays its values as pixel intensities.
@@ -65,24 +65,23 @@ The following commands can be used for displaying images
  [imwrite]
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
-    ```matlab
-    >> A = imread('5.1.12.tiff');
-    >> B = imread('4.2.03.tiff');
-    >> imwrite(A,'5.1.12.png')
-    >> imwrite(A,'5.1.12.jpg')
-    ```
+        ```matlab
+         A = imread('5.1.12.tiff');
+         imwrite(A,'5.1.12.png')
+         imwrite(A,'5.1.12.jpg')
+        ```
 
 3.  Write a matlab function that takes the path of an image and converts it to jpg
         
         ```matlab
-        >>function im_2_jpg (image)
+        function im_2_jpg (image)
             %Funcion para convertir el formato de una imagen en cualquier formato
             %  a un formato jpg, se utiliza como parametro el nombre del archivo que
             % se quiere convertir
             A = imread(image);
             [pathstr,name,ext] = fileparts(image);
             imwrite(A,[name,'.jpg'])
-        >>end
+        end
 
         function all_2_jpg
             %Funcion que busca todas las imagenes .tiff del directorio en el que 
