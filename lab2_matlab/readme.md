@@ -218,10 +218,12 @@ which can be otained from [fspecial]
  [imsharpen]
 
 1.  Sharp the ``5.1.12`` image. What do you notice?
-    >> Sharp1=imread('5.1.12.tiff');
-    >> imshow(Sharp1)
-    >> SharpIm=imsharpen(Sharp1);
-    >> figure; imshow(SharpIm)
+```matlab
+     Sharp1=imread('5.1.12.tiff');
+     imshow(Sharp1)
+     SharpIm=imsharpen(Sharp1);
+     figure; imshow(SharpIm)
+```
     
     > You can see an image whose differences between intensity values are much more noticeable. It gives an enhanced 
     > version of the image, you can see the edges better and the difference between objects.
@@ -244,8 +246,6 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
 2.  What is the difference between prewitt and sobel?
 
     > Answer
-
-
 
 ## Color Spaces
 
@@ -397,6 +397,10 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
 7.  Now lets find the train in the next frame, read image ``motion05.512.tiff``.
 8.  Apply the procedure written above to it (use the train template from the past frame)
 9.  What are the limitations of this method?
+
+
+
+    > The limitations of this method reside on images taken with different exposure values that can modify the results of the        correlation, resulting in a wrong assumption that the template is correlating in that spot. 
 
 
 ## End
