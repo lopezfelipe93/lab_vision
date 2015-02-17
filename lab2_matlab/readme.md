@@ -65,13 +65,16 @@ The following commands can be used for displaying images
  [imwrite]
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
+    ```matlab
     >> A = imread('5.1.12.tiff');
     >> B = imread('4.2.03.tiff');
     >> imwrite(A,'5.1.12.png')
     >> imwrite(A,'5.1.12.jpg')
+    ```
 
 3.  Write a matlab function that takes the path of an image and converts it to jpg
-
+        
+        ```matlab
         >>function im_2_jpg (image)
             %Funcion para convertir el formato de una imagen en cualquier formato
             %  a un formato jpg, se utiliza como parametro el nombre del archivo que
@@ -96,16 +99,9 @@ The following commands can be used for displaying images
                 imwrite(A,[name,'.jpg'])
             end    
         end
+        ```
 
 =======
-
-## Writing Images
-
-The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is used for writing images to disk
-
-1.  Look at the manual page
-2.  Write one of the images from before as png and as jpg
-3.  Write a matlab function that takes the path of an image and converts it to jpg
 
 ## Matlab and the shell
 
@@ -270,7 +266,8 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
     ```
 5.  Transform the image to the following color spaces and repeat the exercise
     -   ycbcr
-        RGB = imread('4.2.03.tiff');
+    ```matlab
+       RGB = imread('4.2.03.tiff');
         YCBCR = rgb2ycbcr(RGB);
          Y = YCBCR(:,:,1);
         CB = YCBCR(:,:,2);
@@ -281,8 +278,10 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
         subplot(2,2,3), subimage(CB), title ('Cb');
         subplot(2,2,4), subimage(CR), title ('Cr');
         print ('-dpng','YCbCr_mosaic.png');
+    ```
     
     -   lab
+    ```matlab
         RGB = imread('4.2.03.tiff');
         LAB = rgb2lab(RGB);
         L = LAB(:,:,1);
@@ -294,8 +293,10 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
         subplot(2,2,3), subimage(a), title ('a*');
         subplot(2,2,4), subimage(b), title ('b*');
         print ('-dpng','Lab_mosaic.png');
-
-    -   hsv 
+    ```
+    
+    -   hsv
+    ```matlab
         RGB = imread('4.2.03.tiff');
         HSV = rgb2hsv(RGB);
          H = HSV(:,:,1);
@@ -307,7 +308,7 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
         subplot(2,2,3), subimage(S), title ('S');
         subplot(2,2,4), subimage(V), title ('V');
         print ('-dpng','HSV_mosaic.png');
-        
+    ```
 6.  Save all the mosaics in your github repository
 
 ## Pyramids
@@ -316,12 +317,12 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
  
 1.  Read the manual page
 2.  Create a four level pyramid from the ``5.1.12`` clock  image
-
-    >>I0 = imread('5.1.12.tiff');
-    >>I1 = impyramid(I0, 'reduce');
-    >>I2 = impyramid(I1, 'reduce');
-    >>I3 = impyramid(I2, 'reduce');
-    >>I4 = impyramid(I3, 'reduce');
+    ```matlab
+    I0 = imread('5.1.12.tiff');
+    I1 = impyramid(I0, 'reduce');
+    I2 = impyramid(I1, 'reduce');
+    I3 = impyramid(I2, 'reduce');
+    I4 = impyramid(I3, 'reduce');
 
         >>figure;
         subplot(3,2,1), subimage(I0), title('Imagen');
@@ -330,7 +331,7 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
         subplot(3,2,4), subimage(I3), title ('Tercer nivel');
         subplot(3,2,5), subimage(I4), title ('Cuarto nivel');
         print ('-dpng','Pyramid1.png');
-        
+      ```  
 
 3.  At what level does the people in the picture dissappear?
 
