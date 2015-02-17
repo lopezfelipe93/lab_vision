@@ -1,5 +1,65 @@
 # Introduction to Images in Matlab
 
+<<<<<<< HEAD
+=======
+## Setup
+
+1.  Start the virtual machine
+2.  Clone the original lab vision repository
+
+    ```bash
+    git clone https://github.com/diego0020/lab_vision.git lab_vision_orig
+    ```
+3.  Clone your fork from the repository
+
+    ```bash
+    git clone https://github.com/<USER>/lab_vision.git lab_vision
+    ```
+4.  Copy the folder lab2_matlab to your repository
+
+    ```bash
+    cp -rf lab_vision_orig/lab2_matlab lab_vision
+    ```
+5.  Delete the original repository from your machine
+
+    ```bash
+    rm -rf lab_vision_orig
+    ```
+6.  Commit changes to your repository
+
+    ```bash
+    cd lab_vision
+    git status
+    git add *
+    git commit -m "added matlab lab"
+    ```
+7.  Push changes
+
+    ```bash
+    git push
+    ```    
+8.  Download and uncompress the sipi_images misc folder in your home folder
+
+    ```bash
+    cd ~
+    scp -r vision@guitaca.uniandes.edu.co:/home/vision/sipi_images/misc.tar.gz .
+    # alternative
+    # wget http://sipi.usc.edu/database/misc.tar.gz
+    tar -xzf misc.tar.gz
+    ```    
+9.  Open matlab
+
+    ```bash
+    /usr/local/MATLAB/R2014b/bin/matlab
+    ```
+
+Note: On windows you can use [github for windows](https://windows.github.com/) or [git-scm](http://git-scm.com/)
+
+**IMPORTANT**
+This file contains questions, you should write your answers here and don't forget to **commit** and **push** to
+your github account.
+
+>>>>>>> FETCH_HEAD
 ## Working directory
 
 The following commands can be used inside matlab, just like in bash
@@ -8,10 +68,16 @@ The following commands can be used inside matlab, just like in bash
     -   ls
     -   cd
 
+<<<<<<< HEAD
+=======
+For more file system see http://www.mathworks.com/help/matlab/file-operations.html
+
+>>>>>>> FETCH_HEAD
 Note the current directory is also shown at the top of the graphical interface
 
 1.  Change to the *misc* directory, which contains the uncompressed sipi_images
 2.  List the contents of the directory
+<<<<<<< HEAD
    
 >> ls
 4.1.01.tiff  4.1.06.tiff  4.2.03.tiff  5.1.09.tiff  5.1.14.tiff  5.3.02.tiff  7.1.05.tiff  7.1.10.tiff	  
@@ -35,10 +101,29 @@ house.tiff   4.1.02.tiff  4.1.07.tiff  4.2.04.tiff  5.1.10.tiff  5.2.08.tiff  7.
     What is the dimension of the output?
         b=imread('4.2.03.tiff')
     >  512 x 512 x 3 
+=======
+
+## Reading Images
+
+The [imread](http://www.mathworks.com/help/matlab/ref/imread.html) command is used in matlab to read images. 
+
+1.  Look at the manual page for the command
+2.  Read the ``5.1.12`` image
+    
+    What is the dimension of the output?
+
+    >   Answer
+
+3.  Read the ``4.2.03`` image
+    What is the dimension of the output?
+
+    >   Answer
+>>>>>>> FETCH_HEAD
 
 ## Displaying Images
 
 The following commands can be used for displaying images
+<<<<<<< HEAD
 [image]
 [imshow]
 1.  Look at their manual pages
@@ -91,6 +176,26 @@ The [imwrite]
         imwrite(A,[name,'.jpg'])
     end
 
+=======
+
+-   [image](http://www.mathworks.com/help/matlab/ref/image.html)
+-   [imshow](http://www.mathworks.com/help/images/ref/imshow.html)
+
+1.  Look at their manual pages
+2.  Try displaying the images read in the previous point using both commands
+3.  What are the differences?
+
+    >   Answer
+
+## Writing Images
+
+The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is used for writing images to disk
+
+1.  Look at the manual page
+2.  Write one of the images from before as png and as jpg
+3.  Write a matlab function that takes the path of an image and converts it to jpg
+
+>>>>>>> FETCH_HEAD
 ## Matlab and the shell
 
 ### Shell from Matlab
@@ -121,12 +226,16 @@ If the command or script doesn't end in ``exit`` the matlab shell will stay open
     -   Or both
 2.  Save this script in the matlab lab folder of your git repository
 
+<<<<<<< HEAD
 matlab -nodisplay -nosplash all_2_jpg.m
 
+=======
+>>>>>>> FETCH_HEAD
 ## Filters
 
 ### Adding noise
 
+<<<<<<< HEAD
  [imnoise]
 
 1.  Read the manual page
@@ -162,26 +271,52 @@ matlab -nodisplay -nosplash all_2_jpg.m
 3.  Try saving noisy images as jpg, what happens?
 
     > Nothing?
+=======
+The [imnoise](http://www.mathworks.com/help/images/ref/imnoise.html) command can be used to add noise to images.
+We can do this to simulate difficult capture conditions, and evaluate the algorithms over difficult situations.
+
+1.  Read the manual page
+2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
+3.  Try saving noisy images as jpg, what happens?
+
+    > Answer
+>>>>>>> FETCH_HEAD
 
 ### Median filter
 
 These filters can be applied to a an image in order to remove noise. 
+<<<<<<< HEAD
 -   To apply a mean filter create it with the function
 -   [fspecial]
     [imfilter]
 -   [medfilt2]
+=======
+-   To apply a mean filter create it with the function [fspecial](http://www.mathworks.com/help/images/ref/fspecial.html)
+    and apply it with [imfilter](http://www.mathworks.com/help/images/ref/imfilter.html) 
+-   To apply a median filter use the function [medfilt2](http://www.mathworks.com/help/images/ref/medfilt2.html)
+>>>>>>> FETCH_HEAD
 
 1.  Read the manuals for the functions described above
 2.  Try applying both kinds of filters to noisy images. Be sure to zoom in to see the effects
 3.  Try different sizes for the filters
 4.  Which filter works best for salt & pepper noise?
 
+<<<<<<< HEAD
     > The median filter works best because it filters the noise without blurring the edges of the image.
+=======
+    > Answer
+
+For more on noise removal read http://www.mathworks.com/help/images/noise-removal.html
+>>>>>>> FETCH_HEAD
 
 ### Blur
 
 To blur or smooth an image we can use the mean filter described above. We can also use the gaussian filter
+<<<<<<< HEAD
 which can be otained from [fspecial]
+=======
+which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fspecial.html).
+>>>>>>> FETCH_HEAD
 
 1.  Smooth an image using average and gaussian filters
 2.  Try different sizes for the filters
@@ -194,6 +329,7 @@ which can be otained from [fspecial]
 The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) function lets us sharpen an image. 
 
 1.  Sharp the ``5.1.12`` image. What do you notice?
+<<<<<<< HEAD
     >> Sharp1=imread('5.1.12.tiff');
     >> imshow(Sharp1)
     >> SharpIm=imsharpen(Sharp1);
@@ -201,6 +337,10 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
     
     > You can see an image whose differences between intensity values are much more noticeable. It gives an enhanced 
     > version of the image, you can see the edges better and the difference between objects.
+=======
+
+    > Answer
+>>>>>>> FETCH_HEAD
 
 2.  Sharp a blurred image. What do you notice?
 
@@ -221,10 +361,26 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
 
     > Answer
 
+<<<<<<< HEAD
 
 ## Color Spaces
 
  [color]
+=======
+More sophisticated methods for finding edges can be found in the following pages
+    -   http://www.mathworks.com/discovery/edge-detection.html
+    -   http://www.mathworks.com/help/images/ref/edge.html
+
+### More
+
+For more filtering operations look at http://www.mathworks.com/help/images/linear-filtering.html
+
+## Color Spaces
+
+As seen on the section on reading image, color images are represented by matrices with 4 dimensios.
+The [color](http://www.mathworks.com/help/images/color.html) matlab module contains functions for moving between
+color spaces.
+>>>>>>> FETCH_HEAD
 
 1.  Load the ``4.2.03.tiff`` image (Mandril).
 2.  Split it into the three color channels
@@ -252,6 +408,7 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
     ```
 5.  Transform the image to the following color spaces and repeat the exercise
     -   ycbcr
+<<<<<<< HEAD
     RGB = imread('4.2.03.tiff');
     YCBCR = rgb2ycbcr(RGB);
          Y = YCBCR(:,:,1);
@@ -290,6 +447,11 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
         subplot(2,2,4), subimage(V), title ('V');
         print ('-dpng','HSV_mosaic.png');
         
+=======
+    -   lab
+    -   hsv (use [rgb2hsv](http://www.mathworks.com/help/matlab/ref/rgb2hsv.html))
+
+>>>>>>> FETCH_HEAD
 6.  Save all the mosaics in your github repository
 
 ## Pyramids
@@ -298,6 +460,7 @@ The [impyramid](http://www.mathworks.com/help/images/ref/impyramid.html) functio
 
 1.  Read the manual page
 2.  Create a four level pyramid from the ``5.1.12`` clock  image
+<<<<<<< HEAD
     I0 = imread('5.1.12.tiff');
     I1 = impyramid(I0, 'reduce');
     I2 = impyramid(I1, 'reduce');
@@ -320,6 +483,15 @@ The [impyramid](http://www.mathworks.com/help/images/ref/impyramid.html) functio
 4.  At what level does the numbers in the clock disappear?
 
     >  From the second level on, it is not possible to identify the shape on any number in the clock.
+=======
+3.  At what level does the people in the picture dissappear?
+
+    >   Answer
+    
+4.  At what level does the numbers in the clock disappear?
+
+    >   Answer
+>>>>>>> FETCH_HEAD
 
 ## Template Matching
 
@@ -359,14 +531,25 @@ The [norm2corrx](http://www.mathworks.com/help/images/ref/normxcorr2.htm) can be
     ```
 6.  Explain what the above code does
 
+<<<<<<< HEAD
     > The above code uses the image 'train' as a pattern and correlates it with the image 'image' to find the places      that look the most like the image train, thus those places will give the highest correlation. Then it shows an        image with bright spots where the highest correlation is in the image.
+=======
+    > Answer
+>>>>>>> FETCH_HEAD
     
 7.  Now lets find the train in the next frame, read image ``motion05.512.tiff``.
 8.  Apply the procedure written above to it (use the train template from the past frame)
 9.  What are the limitations of this method?
 
+<<<<<<< HEAD
     > Such file is not present in the repository or in the provided images.
 
+=======
+    > Answer
+
+See [here](http://www.mathworks.com/help/images/examples/registering-an-image-using-normalized-cross-correlation.html)
+another example.
+>>>>>>> FETCH_HEAD
 
 ## End
 

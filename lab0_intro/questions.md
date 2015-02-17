@@ -30,6 +30,7 @@
     >  The `-prune`` option inside the ``find`` command allows the user to exclude a given directory from the search done by the        ``find`` command. This exclusion will limit the search and make it more precise, for example if you want to search for some         files related to clients but you want to exclude the clients from 2014 you exclude that directory form the search by the            -prune option. The code would look like:
     FelipeLopez$ find . -name '2014*' -prune -o -name '*.client'
 
+<<<<<<< HEAD
 5.  Where is the file ``xxxxxx``
     > The file could not be found. Permission was denied and the file was not found.   
     [vision@guitaca ~]$ find / -name 'xxxxxx'
@@ -54,6 +55,16 @@
     >  [vision@guitaca ~]$ cd /usr/src
        [vision@guitaca src]$ grep -r 'gpl' | wc -l
        367
+=======
+5.  Where is the file ``grub.cfg``
+    >   answer
+
+6.  How many files with ``gnu`` in its name are in ``/usr/src``
+    >   answer
+
+7.  How many files contain ``gpl`` inside in ``/usr/src``
+    >   answer
+>>>>>>> FETCH_HEAD
 
 8.  What does the ``cut`` command do?
     >  The ``cut`` command allows you to extract a part of a file determined by the parameters following the command. 
