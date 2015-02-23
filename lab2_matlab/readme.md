@@ -185,7 +185,7 @@ Imagen 5
 
 3.  Try saving noisy images as jpg, what happens?
 
-    > Nothing?
+    > The jpg format smooths the image a little trying to reduce the noise, so the noise blurs a little.
 
 
 ### Median filter
