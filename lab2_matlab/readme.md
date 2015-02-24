@@ -208,10 +208,20 @@ To blur or smooth an image we can use the mean filter described above. We can al
 which can be otained from [fspecial]
 
 1.  Smooth an image using average and gaussian filters
+    ```matlab
+    A=fspecial('average');
+    B=fspecial('gaussian');
+    image=imread('boat.512.tiff');
+    filt1=imfilter(image,A);
+    filt2=imfilter(image,B);
+    subplot(2,1,1), subimage(filt1), title('Average');
+    subplot(2,1,2), subimage(filt2), title('Gaussian');
+    ```
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
-    > Answer
+    > The blurring with the average filter is much stronger until the gaussian filter reaches a large size. With a normal
+      size filter the gaussian preserves much more the edges of the image.
 
 ### Sharpen
 
@@ -230,7 +240,8 @@ which can be otained from [fspecial]
 
 2.  Sharp a blurred image. What do you notice?
 
-    > Answer
+    > By sharpening a blurred image you can get back some of the edge information lost on the blurring of the image. Some of 
+      the edges are restored and the image looks a little more defined.
 
 ### Edge detection
 
@@ -245,7 +256,7 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
 1.  Try applying this filters
 2.  What is the difference between prewitt and sobel?
 
-    > Answer
+    > The sobel filter detects more edges than the prewitt operator, its finds more weak edges than the prewitt operator.
 
 ## Color Spaces
 
