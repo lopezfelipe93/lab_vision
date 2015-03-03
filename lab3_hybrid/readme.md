@@ -61,27 +61,19 @@ The hybrid image is composed by adding the two filtered images. The full formula
 Where *f1* and *f2* are low pass filters, and *X1* and *X2* are the input images. Notice that the effect depends on the cut-off frequencies of both filters (see figure 5 of the [Hybrid Images paper](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf)). Additionally, you may scale the amplitude of one of the images to reduce or increase its impact. Play with this parameters to get a good Hybrid Image.
 
 - Upload the full matlab script used to generate the image to the repository
-```matlab
-    LP_filter=fspecial('gaussian',15,15);
-    imagesc(LP_filter)
-    im1=imread('bicycle.bmp');
-    im2=imread('motorcycle.bmp');
-    low_image=imfilter(im1,LP_filter);
-    high_image=im2-imfilter(im2,LP_filter);
-    hybrid=low_image+high_image;
-    subplot(2,2,1), subimage(low_image), title('Low');
-    subplot(2,2,2), subimage(high_image), title('High');
-    subplot(2,2,3), subimage(hybrid), title('Hybrid');
-    figure;imshow(hybrid)
-```
+> Uploaded in the folder Matlab Codes as hybridScript
 
 - Upload the final image to the repository
+
+![Hybrid](Hybrid.jpg)
 
 ### Visualization
 
 In order to simulate how the image will look from different distances we can use a pyramid (see figure at the bottom of http://cs.brown.edu/courses/cs143/proj1/ ).
 
 - Create such a visualization for your image
+
+![Piramide](Pyramid.jpg)
 - Upload it to the repository
 
 ## Homework
