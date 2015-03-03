@@ -35,6 +35,9 @@ For creating the high-pass filtered image, apply a low pass filter to it, and th
 Look at the [fft](http://www.mathworks.com/help/matlab/ref/fft2.html) and [dct](http://www.mathworks.com/help/images/ref/dct2.html) transforms of
 
 - The original images
+![Bicicleta](Image1.jpg)
+
+![Moto](Image2.jpg)
 - The filter 
 - The filtered images
 
