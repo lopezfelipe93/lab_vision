@@ -117,4 +117,4 @@ Finally, upload to the repository
 ![Pyramid_C](Pyramid_C.jpg)
 
 - The code you used to blend them
-> The code was uploades to the repository in the folder Matlab Codes by the name HmwkHybrid.m
+>The code was uploades to the repository in the folder Matlab Codes by the name HmwkHybrid.m
