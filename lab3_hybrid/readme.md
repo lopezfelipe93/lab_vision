@@ -27,6 +27,12 @@ This images look different when viewed from far away (or in a small size), than 
 
 The data folder (originally downloaded from [here](http://cs.brown.edu/courses/cs143/proj1/) ) contains several pairs of images already aligned. Choose one of them, and read both images into matlab.
 
+Imagen 1
+![Bicicleta](Image1.jpg)
+
+Imagen 2
+![Moto](Image2.jpg)
+
 ### Filtering
 
 Use [imfilter](http://www.mathworks.com/help/images/ref/imfilter.html) to apply a low pass filter to one image.
@@ -35,11 +41,16 @@ For creating the high-pass filtered image, apply a low pass filter to it, and th
 Look at the [fft](http://www.mathworks.com/help/matlab/ref/fft2.html) and [dct](http://www.mathworks.com/help/images/ref/dct2.html) transforms of
 
 - The original images
-![Bicicleta](Image1.jpg)
 
-![Moto](Image2.jpg)
+![Transformadas](Imagenes.jpg)
+
 - The filter 
+
+![Filtros](Filtros.jpg)
+
 - The filtered images
+
+![Filtradas](Filtradas.jpg)
 
 ### Adding the images
 
