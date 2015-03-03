@@ -27,10 +27,12 @@ This images look different when viewed from far away (or in a small size), than 
 
 The data folder (originally downloaded from [here](http://cs.brown.edu/courses/cs143/proj1/) ) contains several pairs of images already aligned. Choose one of them, and read both images into matlab.
 
-Imagen 1
+*Image 1*
+
 ![Bicicleta](Image1.jpg)
 
-Imagen 2
+*Image 2*
+
 ![Moto](Image2.jpg)
 
 ### Filtering
@@ -61,10 +63,11 @@ The hybrid image is composed by adding the two filtered images. The full formula
 Where *f1* and *f2* are low pass filters, and *X1* and *X2* are the input images. Notice that the effect depends on the cut-off frequencies of both filters (see figure 5 of the [Hybrid Images paper](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf)). Additionally, you may scale the amplitude of one of the images to reduce or increase its impact. Play with this parameters to get a good Hybrid Image.
 
 - Upload the full matlab script used to generate the image to the repository
-> Uploaded in the folder Matlab Codes as hybridScript
+> Uploaded in the folder Matlab Codes as hybridScript.m
 
 - Upload the final image to the repository
 
+*Final Image*
 ![Hybrid](Hybrid.jpg)
 
 ### Visualization
@@ -73,8 +76,9 @@ In order to simulate how the image will look from different distances we can use
 
 - Create such a visualization for your image
 
+*Pyramid*
+
 ![Piramide](Pyramid.jpg)
-- Upload it to the repository
 
 ## Homework
 
@@ -91,6 +95,22 @@ Notice that you will have to align the images to increase the effect. To do this
 Finally, upload to the repository 
 
 - The original images
-- The final hybrid image
-- The code you used to blend them
 
+*Image 1*
+![Caro1](Caro1.jpg)
+
+*Image 2*
+![Caro2](Caro2.jpg)
+
+
+
+- The final hybrid image
+*Final Hybrid*
+
+![Hybrid_C](HybridCaro.jpg)
+
+*Visualization*
+![Pyramid_C](Pyramid_C.jpg)
+
+- The code you used to blend them
+ > The code was uploades to the repository in the folder Matlab Codes by the name HmwkHybrid.m
