@@ -68,6 +68,7 @@ Where *f1* and *f2* are low pass filters, and *X1* and *X2* are the input images
 - Upload the final image to the repository
 
 *Final Image*
+
 ![Hybrid](Hybrid.jpg)
 
 ### Visualization
@@ -97,9 +98,11 @@ Finally, upload to the repository
 - The original images
 
 *Image 1*
+
 ![Caro1](Caro1.jpg)
 
 *Image 2*
+
 ![Caro2](Caro2.jpg)
 
 
@@ -110,7 +113,8 @@ Finally, upload to the repository
 ![Hybrid_C](HybridCaro.jpg)
 
 *Visualization*
+
 ![Pyramid_C](Pyramid_C.jpg)
 
 - The code you used to blend them
- > The code was uploades to the repository in the folder Matlab Codes by the name HmwkHybrid.m
+> The code was uploades to the repository in the folder Matlab Codes by the name HmwkHybrid.m
